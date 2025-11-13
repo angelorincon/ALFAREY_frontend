@@ -18,9 +18,7 @@
   --max-layout-width: 1200px;         /* ancho máximo del site */
 }
 
-/* ================================
-   RESET / BASE
-   ================================ */
+/*RESET*/
 
 * {
   box-sizing: border-box;
@@ -92,7 +90,7 @@ nav ul li a {
   text-decoration: none;
   color: var(--color-texto-nav);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   transition: color 0.22s ease, border-bottom 0.22s ease;
 }
 
@@ -111,9 +109,9 @@ nav ul li a:hover {
 /* Icono carrito en header */
 .icono-carrito-container {
   position: absolute;
-  top: 15px;
+  top: 22px;
   right: 20px;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   color: var(--color-texto-nav);
   cursor: pointer;
   z-index: 20;
@@ -155,10 +153,15 @@ h1 {
   font-weight: 600;
   text-align: center;
   margin: 80px 0 20px;
-  color: var(--color-texto-nav);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 1.0);
 }
 
+h2{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
 /* QUIENES SOMOS*/
 
 /* Estilizar la sección descripción principal */
@@ -499,7 +502,7 @@ legend {
 
 #contacto-id {
   border: 2px solid var(--color-borde);
-  width: 90%;
+  width: 50%;
   max-width: 900px;
   padding: 18px;
   display: flex;
