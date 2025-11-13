@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Link a Font Awesome para usar el icono del carrito -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>ALFAREY</title>
+  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+  <!-- Link a Font Awesome para usar el icono del carrito -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="header-container"> <!--Este lo puse para poder que la imagen llegara hasta el top -->
+    <header >
+    <nav class="nav-bar">
+      <ul>
+        <!-- Angelo: Creo que los botones de navegacion se ven mejor en mayusculas -->
+        <li><a href="/frontend/index.html">INICIO</a></li>
+        <li><a href="/frontend/catalogo.html">CATALOGO</a></li>
+        <li><a href="/frontend/carrito.html">CARRITO</a></li>
+        <li><a href="/frontend/contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+    
+        <h1>ALFAREY</h1>
+
+    <!-- Contenedor del icono del carrito y contador -->
+    <a href="/frontend/carrito.html" class="icono-carrito-container">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <span id="contador-carrito" class="contador-carrito">0</span>
+    </a>
+
+    </header>
+
+    <!-- El div con clase "icono-carrito" anterior se elimina/reemplaza por el <a> arriba -->
+    <!-- <div class="icono-carrito">
+      <i class="fa fa-shopping-cart" aria-hidden="false"></i>
+    </div> -->
+
+    <div class="hero">
+  
+    </div>  
+  </div>
+    
+    <h2>ARTICULOS DESTACADOS</h2>
+
+      <div id="inicio">
+
+        <div id="destacado1" class="tarjetas">
+        <h4>Polo negra para hombre</h4>
+        <img src="/frontend/img/camisaHombreNegra.jpeg" loading="lazy"  alt="Polo negra para hombre" width="240" height="240">
+        
+        <p>Precio: $90.000</p>
+        <button>Añadir al carrito</button>
+        </div>
+
+        <div id="destacado2" class="tarjetas">
+        <h4>Polo negra para mujer</h4>
+         <img src="/frontend/img/poloMujerNegra.jpeg" loading="lazy" alt="Polo negra para mujer" width="240" height="240">
+        
+        <p>Precio: $90.000</p>
+        <button>Añadir al carrito</button>
+        </div>
+
+        <div id="destacado3" class="tarjetas">
+        <h4>Polo gris para hombre</h4>
+         <img src="/frontend/img/poloHombreGris.jpeg" loading="lazy" alt="camisa de mujer negra" width="240" height="240">
+        
+        <p>Precio: $90.000</p>
+        <button>Añadir al carrito</button>
+        </div>
+
+  <section class="description">
+    <div class="descripcion">
+      <h2 id="presentacion">¿QUIENES SOMOS?</h2>
+    <p id="parrafo-presentacion">AlfaRey es más que una marca de ropa; es una declaración. <br> 
+
+    En cada una de nuestras camisas, tejemos la esencia de un espíritu audaz y una fe inquebrantable, diseñado para quienes no solo se visten, sino que se expresan. <br>
+
+    Nuestro logo, el corazón de nuestra identidad, fusiona dos poderosos emblemas: <br> <br>
+
+    •El León: Refleja la audacia de quien se atreve a dejar su propia huella. Es el símbolo de la confianza que sentirás al vestir nuestras prendas, la excelencia en el diseño y la calidad que nos define. <br> 
+
+    •La Cruz: Representa la Fe, el propósito y los valores que nos guían. Es un recordatorio de que la verdadera fortaleza surge de convicciones profundas y que cada paso, cada decisión, está diseñada por principios sólidos. <br> <br>
+
+    En AlfaRey, entendemos que la ropa es una extensión de ti. Por eso, nuestras camisas están pensadas para aquellos que caminan con confianza, que se visten con un propósito y que inspiran a otros. <br> 
+
+    Cada prenda es un testimonio de cómo la fuerza exterior y la fe interior pueden unirse para crear un estilo auténtico y significativo.
+
+    Viste con fuerza, viste con fe, viste AlfaRey. </p>
+    </div>
+  </section>
+
+      </div>
+
+  <footer>
+      <p>AlfaRey 2025. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

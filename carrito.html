@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Link a Font Awesome para usar el icono del carrito -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>CARRITO - ALFAREY</title>
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+    <!-- Link a Font Awesome para usar el icono del carrito -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/frontend/index.html">INICIO</a></li>
+        <li><a href="/frontend/catalogo.html">CATALOGO</a></li>
+        <li><a href="/frontend/carrito.html">CARRITO</a></li>
+        <li><a href="/frontend/contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+
+    <h1>ALFAREY</h1>
+    
+    <!-- Contenedor del icono del carrito y contador -->
+    <a href="/frontend/carrito.html" class="icono-carrito-container">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <span id="contador-carrito" class="contador-carrito">0</span>
+    </a>
+  </header>
+
+  <h2>RESUMEN DE TU COMPRA</h2>
+
+    <!--En este contenedor mostraremos los productos del carrito -->
+    <div id="contenedor-carrito" class="clase-carrito">
+        <!-- El contenido será cargado por JavaScript -->
+    </div>
+
+    <!-- Aqui se mostrara el valor total de la compra -->
+    <h2 id="total"></h2>
+
+    <!-- Botón para vaciar el carrito -->
+    <button id="vaciar-carrito">Vaciar carrito</button>
+
+    <!-- Botón de Checkout (Simulado) -->
+    <button id="boton-checkout" onclick="mostrarNotificacion('¡Procesando pago! (Funcionalidad de checkout pendiente)')" style="
+        display: block; 
+        margin: 20px auto 40px; 
+        padding: 15px 30px; 
+        background-color: #4CAF50; /* Verde */
+        color: white; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.2s;">
+        Proceder al Checkout
+    </button>
+
+  <footer>
+      <p>AlfaRey 2025. Todos los derechos reservados.</p>
+  </footer>
+
+<script src="script.js"></script> 
+</body>
+
+</html>
