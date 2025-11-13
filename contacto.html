@@ -58,42 +58,36 @@
 <p id="respuesta"></p>
 
     <!-- Script para recibir los mensajes -->
-  </main>
 
   <script>
-  const form = document.getElementById("form-contacto");
+      const form = document.getElementById("contactForm");
+      const respuesta = document.getElementById("respuesta");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    const data = {
-      nombre: document.getElementById("nombre").value,
-      email: document.getElementById("email").value,
-      mensaje: document.getElementById("mensaje").value
-    };
+        const datos = {
+          nombre: form.nombre.value,
+          email: form.email.value,
+          mensaje: form.mensaje.value,
+        };
 
-    try {
-      const res = await fetch("http://localhost:5000/api/contacto", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        try {
+          const res = await fetch("http://localhost:5000/api/contacto", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(datos),
+          });
+
+          const data = await res.json();
+          respuesta.textContent = data.message;
+          respuesta.style.color = data.success ? "green" : "red";
+          if (data.success) form.reset();
+        } catch (error) {
+          respuesta.textContent = "Error al enviar el mensaje.";
+          respuesta.style.color = "red";
+        }
       });
-
-      const result = await res.json();
-      document.getElementById("respuesta").textContent = result.message;
-      form.reset();
-    } catch (error) {
-      document.getElementById("respuesta").textContent = "❌ Error al enviar el mensaje";
-    }
-  });
-</script>
-
-
-  <footer>
-      <p>AlfaRey 2025. Todos los derechos reservados.</p>
-  </footer>
-
-<script src="script.js"></script>
-</body>
-
+    </script>
+  </body>
 </html>
