@@ -361,3 +361,51 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
     }
 });
+
+
+// frontend/script.js codigo para el backend
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contacto-id");
+  const respuesta = document.getElementById("respuesta");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const celular = document.getElementById("celular").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (!nombre || !correo || !celular || !mensaje) {
+      respuesta.textContent = "Por favor completa todos los campos.";
+      respuesta.style.color = "red";
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:5000/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, correo, celular, mensaje }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        respuesta.textContent = "✅ Mensaje enviado con éxito.";
+        respuesta.style.color = "green";
+        form.reset();
+      } else {
+        respuesta.textContent = data.message || "⚠️ Error al enviar el mensaje.";
+        respuesta.style.color = "red";
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      respuesta.textContent = "Error al conectar con el servidor.";
+      respuesta.style.color = "red";
+    }
+  });
+});

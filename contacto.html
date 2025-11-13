@@ -47,16 +47,20 @@
 
     
     <form id="contacto-id">
-    <p class="parrafo-formulario">Todos los campos son obligatorios</p>
-  <input type="text" class="nombre-formulario" placeholder="Tu nombre" required>
-  <input type="email" class="email-formulario" placeholder="Tu correo" required>
-  <input type="tel" name="phone" id="phone" placeholder="Tu celular" required>
+      <p class="parrafo-formulario">Todos los campos son obligatorios</p>
 
-  <textarea id="message " rows="3" cols="" placeholder="Tu mensaje" required></textarea>
-  <button id="boton-contacto" type="submit">Enviar</button>
-</form>
+      <input type="text" id="nombre" class="nombre-formulario" placeholder="Tu nombre" required>
+      <input type="email" id="correo" class="email-formulario" placeholder="Tu correo" required>
+      <input type="tel" id="celular" placeholder="Tu celular" required>
+      <textarea id="mensaje" rows="3" placeholder="Tu mensaje" required></textarea>
 
-<p id="respuesta"></p>
+      <button id="boton-contacto" type="submit">Enviar</button>
+    </form>
+
+    <p id="respuesta"></p>
+  </main>
+
+  <script src="script.js"></script>
 
     <!-- Script para recibir los mensajes -->
 
