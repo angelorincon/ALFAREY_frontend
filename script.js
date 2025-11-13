@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const res = await fetch("https://alfarey-backend.onrender.com", {
+      const res = await fetch("https://alfarey-backend.onrender.com/api/contacto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nombre, correo, celular, mensaje }),
