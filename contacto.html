@@ -80,11 +80,10 @@
       });
 
       const result = await res.json();
-      alert(result.message);
+      document.getElementById("respuesta").textContent = result.message;
       form.reset();
-
-    } catch (err) {
-      alert("❌ Error al enviar el mensaje. Intenta de nuevo.");
+    } catch (error) {
+      document.getElementById("respuesta").textContent = "❌ Error al enviar el mensaje";
     }
   });
 </script>
