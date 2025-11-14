@@ -291,8 +291,12 @@ h2{
     width: 95%;
     max-width: 520px;
   }
-}
 
+  footer{
+    position: relative;
+    top: 170px;
+  }
+}
 /*CATÁLOGO*/
 
 .clase-productos {
