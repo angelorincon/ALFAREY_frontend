@@ -281,8 +281,24 @@ h2{
   transform: translateY(-2px);
 }
 
-/* Ajuste responsivo para móviles */
+/* Estructura general para que el footer quede abajo */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
+/* ---- Tu media query ajustada ---- */
 @media (max-width: 768px) {
+
   #inicio {
     padding: 12px;
   }
@@ -292,11 +308,14 @@ h2{
     max-width: 520px;
   }
 
-  footer{
-    position: relative;
-    top: 170px;
+  footer {
+    margin-top: auto;        /* Mantener el footer abajo */
+    display: flex;
+    justify-content: center; /* Ajusté este valor para una distribución más común */
+    padding: 16px;
   }
 }
+
 /*CATÁLOGO*/
 
 .clase-productos {
