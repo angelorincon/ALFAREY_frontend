@@ -314,6 +314,10 @@ main {
     justify-content: center; /* Ajusté este valor para una distribución más común */
     padding: 16px;
   }
+
+  .description{
+    height: auto;
+  }
 }
 
 /*CATÁLOGO*/
